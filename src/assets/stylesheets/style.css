@@ -66,3 +66,54 @@ ul, ol {
 img {
   max-width: 100%;
   vertical-align: middle; }
+
+html, body, .outer, .inner {
+  height: 100%; }
+
+html {
+  overflow: hidden; }
+
+body {
+  min-height: 100%;
+  overflow: hidden; }
+
+.inner {
+  min-height: 300px; }
+
+.pane {
+  height: 50%;
+  min-height: 300px; }
+  @media (min-width:1024px) {
+    .pane {
+      height: 100%;
+      margin-right: -1px;
+      padding-right: 1px;
+      position: absolute;
+      top: 0;
+      width: 50%; } }
+
+@media (min-width:1024px) {
+  .pane--one {
+    background-color: blue; } }
+
+@media (min-width:1024px) {
+  .pane--two {
+    left: auto;
+    right: 0;
+    background-color: red; } }
+
+.pane-inner {
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  width: 100%; }
+
+.pane-inner--main {
+  height: auto;
+  padding: 20px;
+  padding: 1rem; }
+  @media (min-width:1024px) {
+    .pane-inner--main {
+      overflow-y: auto;
+      height: 100%; } }
