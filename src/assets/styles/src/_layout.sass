@@ -1,0 +1,56 @@
+// ----------------------------------
+//
+// Layout styles
+//
+// ----------------------------------
+
+
+// ----------------------------------
+//
+// Pane provides split view layout
+//
+// ----------------------------------
+
+.pane
+  height: 50%
+  min-height: $min-height
+  +media($desk)
+    height: 100%
+    margin-right: -1px
+    padding-right: 1px
+    position: absolute
+    top: 0
+    width: 50%
+
+.pane--one
+  background-color: $blue-pale
+
+.pane--two
+  +media($desk)
+    left: auto
+    right: 0
+
+.pane-inner
+  box-sizing: border-box
+  height: 100%
+  overflow: hidden
+  -webkit-overflow-scrolling: touch
+  width: 100%
+
+.pane-inner--main
+  height: auto
+  +rem(padding, $normal)
+  +media($desk)
+    overflow-y: auto
+    height: 100%
+
+// ----------------------------------
+//
+// Centre provides centred layout
+//
+// ----------------------------------
+
+.centre
+  display: flex
+  align-items: center
+  justify-content: center

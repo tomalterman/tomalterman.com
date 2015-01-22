@@ -1,3 +1,6 @@
+.align--center {
+  text-align: center; }
+
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -92,15 +95,13 @@ body {
       top: 0;
       width: 50%; } }
 
-@media (min-width:1024px) {
-  .pane--one {
-    background-color: blue; } }
+.pane--one {
+  background-color: #76CBE3; }
 
 @media (min-width:1024px) {
   .pane--two {
     left: auto;
-    right: 0;
-    background-color: red; } }
+    right: 0; } }
 
 .pane-inner {
   box-sizing: border-box;
@@ -117,3 +118,40 @@ body {
     .pane-inner--main {
       overflow-y: auto;
       height: 100%; } }
+
+.centre {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+body {
+  font: 120%/1.5 'Trykker', serif;
+  -webkit-font-smoothing: antialiased; }
+
+h1 {
+  font-family: 'Voltaire', sans-serif; }
+
+.fa span {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important; }
+
+.list--secret {
+  list-style: none; }
+
+.list--inline > li {
+  display: inline; }
+
+.img--round {
+  border-radius: 50%; }
