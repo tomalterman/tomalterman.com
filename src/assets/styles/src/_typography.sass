@@ -15,3 +15,95 @@ h1
 .list--inline
   > li
     display: inline
+
+p
+  +rem(margin-bottom, $normal)
+
+a
+  color: $blue-black
+
+  &:hover, &:focus, &:active
+    opacity: 0.5
+
+//To refactor
+.header--home
+
+  h1
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 44px
+    border-bottom: 1px solid black
+    display: inline-block
+
+  p
+    font-family: 'Voltaire'
+    letter-spacing: 1px
+    font-style: italic
+    font-size: 17px
+
+.u-margin--none
+  margin-bottom: 0
+
+.buttonGroup
+  list-style: none
+  width: 100%
+  text-align: center
+  
+  +media($not-palm)
+    width: auto
+
+  > li
+    +media($not-palm)
+      display: inline-block
+      margin-left: $bigger
+
+    &:first-child
+      margin-left: 0
+
+    +media($desk)
+      display: block
+      margin-left: 0
+
+.button--home
+  +rem(padding, $small $vhuge)
+  border: 2px solid black
+  font-family: 'Voltaire', sans-serif
+  display: block
+  text-decoration: none
+  +rem(font-size, $bigger)
+  margin-bottom: $bigger
+  color: $black
+
+.button--salmon
+  border-color: $salmon
+  background-color: $salmon
+
+  &:hover, &:focus, &:active
+    background-color: $salmon
+
+.button--tan
+  border-color: $tan
+  background-color: $tan
+
+  &:hover, &:focus, &:active
+    background-color: $tan
+
+.button--greeny
+  border-color: $greeny
+  background-color: $greeny
+
+  &:hover, &:focus, &:active
+    background-color: $greeny
+
+.introText
+  text-align: center
+  max-width: 38em
+  +rem(padding, 0 $huge)
+
+.contacts
+  +rem(font-size, 44px)
+  max-width: 10em
+  margin: 0 auto
+
+  a
+    color: $black

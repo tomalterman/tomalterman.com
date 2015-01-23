@@ -12,7 +12,8 @@
 // ----------------------------------
 
 .pane
-  height: 50%
+  padding-top: $big
+  padding-bottom: $big
   min-height: $min-height
   +media($desk)
     height: 100%
@@ -54,3 +55,21 @@
   display: flex
   align-items: center
   justify-content: center
+
+// ----------------------------------
+//
+// Equal distance layout
+//
+// ----------------------------------
+
+.equal
+  width:100%
+  display: table
+
+  ul
+    display: table-row
+    list-style: none
+    
+    li
+      display: table-cell
+      text-align: center

@@ -5,14 +5,17 @@
 // ----------------------------------
 
 html, body, .outer, .inner
-  height: 100%
+  +media($desk)
+    height: 100%
 
 html
-  overflow: hidden
+  +media($desk)
+    overflow: hidden
 
 body
-  min-height: 100%
-  overflow: hidden
+  +media($desk)
+    min-height: 100%
+    overflow: hidden
 
 .inner
   min-height: $min-height
