@@ -1,0 +1,19 @@
+.nav
+  width: 100%
+  +rem(padding, $small $normal)
+
+  .logo
+    float: left
+    color: $black
+    text-decoration: none
+    +rem(padding, $tiny 0)
+
+  .button
+    display: inline-block
+    border-width: 0
+
+    &.isActive
+      border-bottom-width: 1px
+
+  > ul
+    float: right

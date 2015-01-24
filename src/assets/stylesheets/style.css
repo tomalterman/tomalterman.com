@@ -1,6 +1,10 @@
 .align--center {
   text-align: center; }
 
+.u-gap--bigger {
+  margin-bottom: 40px;
+  margin-bottom: 2rem; }
+
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -86,40 +90,70 @@ img {
 .inner {
   min-height: 300px; }
 
+.nav {
+  width: 100%;
+  padding: 16px 20px;
+  padding: 0.8rem 1rem; }
+  .nav .logo {
+    float: left;
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 0;
+    padding: 0.4rem 0; }
+  .nav .button, .nav .button--sidebar, .nav .button--next, .nav .button--home {
+    display: inline-block;
+    border-width: 0; }
+    .nav .button.isActive, .nav .isActive.button--sidebar, .nav .isActive.button--next, .nav .isActive.button--home {
+      border-bottom-width: 1px; }
+  .nav > ul {
+    float: right; }
+
+.pane--nav {
+  position: absolute;
+  top: 0;
+  z-index: 2; }
+
 .pane {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  min-height: 300px; }
+  min-height: 300px;
+  z-index: 1; }
   @media (min-width:1024px) {
     .pane {
       height: 100%;
-      margin-right: -1px;
-      padding-right: 1px;
       position: absolute;
-      top: 0;
-      width: 50%; } }
+      top: 0; } }
 
 .pane--one {
   background-color: #76CBE3; }
+  @media (min-width:1024px) {
+    .pane--one {
+      width: 24em; } }
 
 @media (min-width:1024px) {
   .pane--two {
     left: auto;
-    right: 0; } }
+    right: 0;
+    width: calc(100% - 24em); } }
 
 .pane-inner {
+  padding-top: 120px;
+  padding-top: 6rem;
+  padding-bottom: 24px;
+  padding-bottom: 1.2rem;
   box-sizing: border-box;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   width: 100%; }
 
 .pane-inner--main {
   height: auto;
-  padding: 20px;
-  padding: 1rem; }
+  padding-top: 64px;
+  padding-top: 3.2rem; }
   @media (min-width:1024px) {
     .pane-inner--main {
+      padding-top: 140px;
+      padding-top: 7rem;
       overflow-y: auto;
       height: 100%; } }
 
@@ -144,12 +178,26 @@ img {
       display: table-cell;
       text-align: center; }
 
+.textContent {
+  padding-left: 64px;
+  padding-left: 3.2rem;
+  padding-right: 64px;
+  padding-right: 3.2rem; }
+
 body {
   font: 120%/1.5 'Trykker', serif;
   -webkit-font-smoothing: antialiased; }
 
-h1 {
+h1, h2 {
   font-family: 'Voltaire', sans-serif; }
+
+h1 {
+  font-size: 80px;
+  font-size: 4rem; }
+
+h2 {
+  font-size: 56px;
+  font-size: 2.8rem; }
 
 .fa span {
   border: 0 !important;
@@ -176,14 +224,23 @@ a {
   a:hover, a:focus, a:active {
     opacity: 0.5; }
 
-.header--home h1 {
+.ul {
+  margin-left: 20px;
+  margin-left: 1rem;
+  margin-bottom: 20px;
+  margin-bottom: 1rem; }
+
+.header--name {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 44px;
   border-bottom: 1px solid black;
-  display: inline-block; }
+  display: inline-block;
+  font-family: 'Voltaire', sans-serif; }
+
+.header--home h1 {
+  font-size: 44px; }
 .header--home p {
-  font-family: 'Voltaire';
+  font-family: 'Voltaire', sans-serif;
   letter-spacing: 1px;
   font-style: italic;
   font-size: 17px; }
@@ -191,35 +248,85 @@ a {
 .u-margin--none {
   margin-bottom: 0; }
 
-.buttonGroup {
+.buttonGroup--home {
   list-style: none;
   width: 100%;
   text-align: center; }
   @media (min-width:768px) {
-    .buttonGroup {
+    .buttonGroup--home {
       width: auto; } }
   @media (min-width:768px) {
-    .buttonGroup > li {
+    .buttonGroup--home > li {
       display: inline-block;
       margin-left: 40px; } }
-  .buttonGroup > li:first-child {
+  .buttonGroup--home > li:first-child {
     margin-left: 0; }
   @media (min-width:1024px) {
-    .buttonGroup > li {
+    .buttonGroup--home > li {
       display: block;
       margin-left: 0; } }
+
+.buttonGroup {
+  list-style: none; }
+  .buttonGroup > li {
+    margin-bottom: 10px;
+    margin-bottom: 0.5rem; }
+    @media (min-width:768px) {
+      .buttonGroup > li {
+        display: inline-block; } }
+    @media (min-width:1024px) {
+      .buttonGroup > li {
+        display: block; } }
+
+.button, .button--sidebar, .button--next, .button--home {
+  font-family: 'Voltaire', sans-serif;
+  border: 2px solid black;
+  padding: 8px 20px;
+  padding: 0.4rem 1rem;
+  display: block;
+  text-decoration: none;
+  color: #000000; }
+  .button:hover, .button--sidebar:hover, .button--next:hover, .button--home:hover, .button:focus, .button--sidebar:focus, .button--next:focus, .button--home:focus, .button:active, .button--sidebar:active, .button--next:active, .button--home:active {
+    background-color: #000000;
+    color: #FFFFFF; }
+
+.button--active {
+  background-color: #000000;
+  color: #FFFFFF;
+  opacity: 0.7; }
+
+.button--sidebar, .button--next {
+  position: relative;
+  padding-right: 32px;
+  padding-right: 1.6rem; }
+  .button--sidebar:after, .button--next:after {
+    content: "";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    right: 10px;
+    right: 0.5rem;
+    top: -4px;
+    top: -0.2rem;
+    font-size: 40px;
+    font-size: 2rem; }
+
+.button--next {
+  float: right;
+  margin-top: 40px;
+  margin-top: 2rem; }
+  .button--next span {
+    font-size: 0.8em;
+    margin-right: 0.5em; }
 
 .button--home {
   padding: 16px 80px;
   padding: 0.8rem 4rem;
-  border: 2px solid black;
-  font-family: 'Voltaire', sans-serif;
-  display: block;
-  text-decoration: none;
   font-size: 40px;
   font-size: 2rem;
-  margin-bottom: 40px;
-  color: #000000; }
+  margin-bottom: 40px; }
+  .button--home:hover, .button--home:focus, .button--home:active {
+    color: #000000; }
 
 .button--salmon {
   border-color: #FF9880;
@@ -239,8 +346,7 @@ a {
   .button--greeny:hover, .button--greeny:focus, .button--greeny:active {
     background-color: #74E7BE; }
 
-.introText {
-  text-align: center;
+.sideContent {
   max-width: 38em;
   padding: 0 64px;
   padding: 0 3.2rem; }
@@ -255,3 +361,9 @@ a {
 
 .img--round {
   border-radius: 50%; }
+
+.img {
+  width: 100%; }
+
+.about .pane--one {
+  background-color: #FF9880; }

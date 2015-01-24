@@ -11,37 +11,48 @@
 //
 // ----------------------------------
 
+.pane--nav
+  position: absolute
+  top: 0
+  z-index: 2
+
 .pane
-  padding-top: $big
-  padding-bottom: $big
   min-height: $min-height
+  z-index: 1
+
   +media($desk)
     height: 100%
-    margin-right: -1px
-    padding-right: 1px
     position: absolute
     top: 0
-    width: 50%
 
 .pane--one
   background-color: $blue-pale
+
+  +media($desk)
+    width: 24em
 
 .pane--two
   +media($desk)
     left: auto
     right: 0
+    width: calc(100% - 24em)
 
 .pane-inner
+  +rem(padding-top, $mega)
+  +rem(padding-bottom, $big)
   box-sizing: border-box
   height: 100%
-  overflow: hidden
+  overflow-x: hidden
+  overflow-y: auto
   -webkit-overflow-scrolling: touch
   width: 100%
 
 .pane-inner--main
   height: auto
-  +rem(padding, $normal)
+  +rem(padding-top, $huge)
+
   +media($desk)
+    +rem(padding-top, $vmega)
     overflow-y: auto
     height: 100%
 
@@ -69,7 +80,17 @@
   ul
     display: table-row
     list-style: none
-    
+
     li
       display: table-cell
       text-align: center
+
+// ----------------------------------
+//
+// Content layout
+//
+// ----------------------------------
+
+.textContent
+  +rem(padding-left, $huge)
+  +rem(padding-right, $huge)

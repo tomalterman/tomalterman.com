@@ -2,8 +2,14 @@ body
   font:120%/1.5 'Trykker', serif
   -webkit-font-smoothing: antialiased
 
+h1, h2
+  font-family: $font-headers
+
 h1
-  font-family: 'Voltaire', sans-serif
+  +rem(font-size, $vhuge)
+
+h2
+  +rem(font-size, $vbigger)
 
 .fa
   span
@@ -25,18 +31,25 @@ a
   &:hover, &:focus, &:active
     opacity: 0.5
 
+.ul
+  +rem(margin-left, $normal)
+  +rem(margin-bottom, $normal)
+
 //To refactor
+.header--name
+  text-transform: uppercase
+  font-weight: 700
+  border-bottom: 1px solid black
+  display: inline-block
+  font-family: $font-headers
+
 .header--home
 
   h1
-    text-transform: uppercase
-    font-weight: 700
     font-size: 44px
-    border-bottom: 1px solid black
-    display: inline-block
 
   p
-    font-family: 'Voltaire'
+    font-family: $font-headers
     letter-spacing: 1px
     font-style: italic
     font-size: 17px
@@ -44,11 +57,11 @@ a
 .u-margin--none
   margin-bottom: 0
 
-.buttonGroup
+.buttonGroup--home
   list-style: none
   width: 100%
   text-align: center
-  
+
   +media($not-palm)
     width: auto
 
@@ -64,15 +77,67 @@ a
       display: block
       margin-left: 0
 
-.button--home
-  +rem(padding, $small $vhuge)
+.buttonGroup
+  list-style: none
+
+  > li
+    +rem(margin-bottom, $vsmall)
+
+    +media($not-palm)
+      display: inline-block
+
+    +media($desk)
+      display: block
+
+.button
+  font-family: $font-headers
   border: 2px solid black
-  font-family: 'Voltaire', sans-serif
+  +rem(padding, $tiny $normal)
   display: block
   text-decoration: none
+  color: $black
+
+  &:hover, &:focus, &:active
+    background-color: $black
+    color: $white
+
+.button--active
+  background-color: $black
+  color: $white
+  opacity: 0.7
+
+.button--sidebar
+  @extend .button
+  position: relative
+  +rem(padding-right, $vbig)
+
+  &:after
+    content: ""
+    font-family: FontAwesome
+    display: block
+    position: absolute
+    +rem(right, $vsmall)
+    +rem(top, -4px)
+    +rem(font-size, $bigger)
+
+.button--next
+  @extend .button--sidebar
+  float: right
+  +rem(margin-top, $bigger)
+
+  span
+    font-size: 0.8em
+    margin-right: 0.5em
+
+.button--home
+  @extend .button
+  +rem(padding, $small $vhuge)
   +rem(font-size, $bigger)
   margin-bottom: $bigger
-  color: $black
+
+  &:hover, &:focus, &:active
+    color: $black
+
 
 .button--salmon
   border-color: $salmon
@@ -95,8 +160,7 @@ a
   &:hover, &:focus, &:active
     background-color: $greeny
 
-.introText
-  text-align: center
+.sideContent
   max-width: 38em
   +rem(padding, 0 $huge)
 

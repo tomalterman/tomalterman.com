@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% include nav.html %}
+
+<div class="pane pane--one" id="paneOne">
+  <div class="pane-inner {{ page.innerClass }}">
+    {% include {{ page.sidebar }} %}
+  </div>
+</div>
+
+<div class="pane pane--two" id="paneTwo">
+  <div class="pane-inner pane-inner--main {{ page.innerClass }}">
+    {{ content }}
+  </div>
+</div>

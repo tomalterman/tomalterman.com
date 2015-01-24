@@ -4,6 +4,10 @@
   {% include head.html %}
 
   <body>
-    {{ content }}
+    <div class="outer {{page.outerClass}}">
+      <div class="inner {{ page.pageClass }}">
+        {{ content }}
+      </div>
+    </div>
   </body>
 </html>
