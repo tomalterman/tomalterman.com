@@ -1,22 +1,30 @@
+html
+  font-size: 16px
+
+  +media($not-palm)
+    font-size: 20px
+
 body
-  font-size: 100%
   color: $black
   background-color: $grey-light
   line-height: 1.5
   font-family: 'Trykker', serif
   -webkit-font-smoothing: antialiased
 
-  +media($not-palm)
-    font-size: 120%
-
 h1, h2
   font-family: $font-headers
 
 h1
-  +rem(font-size, $vhuge)
+  +rem(font-size, $huge)
 
 h2
-  +rem(font-size, $vbigger)
+  +rem(font-size, $lbigger)
+  line-height: 1.2
+  letter-spacing: -1px
+
+h3
+  +rem(font-size, $lbig)
+  +rem(margin-bottom, $tiny)
 
 .fa
   span
@@ -63,7 +71,15 @@ a
 
 .header-skills
   +rem(padding-bottom, $normal)
+  color: $grey-medium
   border-bottom: 1px solid $black
+
+  > li
+    &:before
+      content: '/'
+    &:first-child
+      &:before
+        content: none
 
 .u-margin--none
   margin-bottom: 0
@@ -131,7 +147,7 @@ a
     display: block
     position: absolute
     +rem(right, $vsmall)
-    +rem(top, -4px)
+    +rem(top, -8px)
     +rem(font-size, $bigger)
 
 .button--next
@@ -182,8 +198,12 @@ a
   max-width: 38em
   +rem(padding, 0 $huge)
 
+  .buttonGroup
+    +media($desk)
+      +rem(margin-top, $lbigger)
+
 .contacts
-  +rem(font-size, 44px)
+  +rem(font-size, $lbig)
   max-width: 10em
   margin: 0 auto
 

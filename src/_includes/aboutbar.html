@@ -4,12 +4,9 @@
       <h1>About</h1>
     </header>
   </div>
-  <div>
+  <div class="{% if page.article != 1 %} u-hidden u-lg--block {% endif %}">
     <p>
-      I design and build web and mobile experiences that solve problems in people’s lives.
-    </p>
-    <p>
-      I enjoy both design and development, equally comfortable at sketching out user journeys as writing JavaScript.
+      I design and build web and mobile experiences that solve problems in people’s lives, whether sketching out user journeys or writing JavaScript.
     </p>
     <p>
       Here are some more details about what I do:
@@ -17,13 +14,13 @@
   </div>
   <ul class="buttonGroup">
     <li>
-      <a class="button--sidebar button--active" href="/pages/about-ux.html">User Experience</a>
+      <a class="button--sidebar {% if page.article == 1 %} button--active {% endif %}" href="/pages/about-ux.html">User Experience</a>
     </li>
     <li>
-      <a class="button--sidebar" href="/pages/about-product.html">Product Management</a>
+      <a class="button--sidebar {% if page.article == 2 %} button--active {% endif %}" href="/pages/about-product.html">Product Management</a>
     </li>
     <li>
-      <a class="button--sidebar" href="/pages/about-fe.html">Frontend development</a>
+      <a class="button--sidebar {% if page.article == 3 %} button--active {% endif %}" href="/pages/about-fe.html">Frontend development</a>
     </li>
   </ul>
 </div>

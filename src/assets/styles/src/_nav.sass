@@ -1,12 +1,12 @@
 .nav
   width: 100%
-  +rem(padding, $small $normal)
 
   .logo
     float: left
     color: $black
     text-decoration: none
-    +rem(padding, $tiny 0)
+    +rem(padding, $tiny)
+    +rem(margin, $small $normal)
 
   .button
     display: inline-block
@@ -17,3 +17,10 @@
 
   > ul
     float: right
+    +rem(padding, $small $normal)
+
+    +media($desk)
+      width: calc(100% - 24em)
+      text-align: right
+      background-color: $grey-light
+      background: linear-gradient(to bottom, rgba(255,255,255,1) 1%,rgba(255,255,255,1) 82%,rgba(255,255,255,0) 100%)

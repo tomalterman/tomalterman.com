@@ -4,23 +4,23 @@
       <h1>Work</h1>
     </header>
   </div>
-  <div>
+  <div class="{% if page.article != 1 %} u-hidden u-lg--block {% endif %}">
     <p>
       Here are some examples of projects I’ve worked on.
     </p>
     <p>
-    Most of my work I cannot show in public. If you'd like to see my private portfolio, <a href="mailto:hello@tomalterman.com">get in touch</a>.
+      Most of my work I cannot show in public. If you'd like to see my private portfolio, <a href="mailto:hello@tomalterman.com">get in touch</a>.
     </p>
   </div>
   <ul class="buttonGroup">
     <li>
-      <a class="button--sidebar button--active" href="/pages/work-tr.html">TrialReach</a>
+      <a class="button--sidebar {% if page.article == 1 %} button--active {% endif %}" href="/pages/work-tr.html"> TrialReach</a>
     </li>
     <li>
-      <a class="button--sidebar" href="/pages/work-bnt.html">BraveNewTalent</a>
+      <a class="button--sidebar {% if page.article == 2 %} button--active {% endif %}" href="/pages/work-bnt.html">BraveNewTalent</a>
     </li>
     <li>
-      <a class="button--sidebar" href="/pages/work-gov.html">UK Government Department</a>
+      <a class="button--sidebar {% if page.article == 3 %} button--active {% endif %}" href="/pages/work-gov.html">UK Government Department</a>
     </li>
   </ul>
 </div>
