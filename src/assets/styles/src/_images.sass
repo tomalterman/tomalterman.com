@@ -9,3 +9,18 @@
 
 .img
   width: 100%
+
+.img--border
+  box-shadow: 1px 0px 6px rgba(1, 20, 60, 0.4)
+
+.deliverable
+  +rem(padding-bottom, $normal)
+
+  .img
+    @extend .img--border
+    +rem(margin-top, $tiny)
+    +rem(margin-bottom, $normal)
+
+  figcaption
+    +rem(font-size, $small)
+    font-style: italic

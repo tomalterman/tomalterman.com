@@ -411,6 +411,22 @@ a {
 .img {
   width: 100%; }
 
+.img--border, .deliverable .img {
+  box-shadow: 1px 0px 6px rgba(1, 20, 60, 0.4); }
+
+.deliverable {
+  padding-bottom: 20px;
+  padding-bottom: 1rem; }
+  .deliverable .img {
+    margin-top: 8px;
+    margin-top: 0.4rem;
+    margin-bottom: 20px;
+    margin-bottom: 1rem; }
+  .deliverable figcaption {
+    font-size: 16px;
+    font-size: 0.8rem;
+    font-style: italic; }
+
 @media (min-width:1024px) {
   .home .pane--one, .home .pane--two {
     width: 50%; } }
