@@ -50,6 +50,9 @@ a
   +rem(margin-left, $bigger)
   +rem(margin-bottom, $normal)
 
+  > li
+    +rem(margin-bottom, $tiny)
+
 //To refactor
 .header--name
   text-transform: uppercase
@@ -59,15 +62,29 @@ a
   font-family: $font-headers
 
 .header--home
+  +rem(margin-bottom, $bigger)
 
   h1
     font-size: 44px
 
   p
     font-family: $font-headers
-    letter-spacing: 1px
+    letter-spacing: 2px
     font-style: italic
     font-size: 17px
+
+.headerImg
+  position: relative
+
+.headerImg-h
+  position: absolute
+  bottom: $normal
+  +rem(left, $huge)
+  z-index: 2
+
+.headerImg-img
+  opacity: 0.4
+  z-index: 1
 
 .header-skills
   +rem(padding-bottom, $normal)
@@ -110,7 +127,7 @@ a
   > li
     +rem(margin-bottom, $vsmall)
 
-    +media($not-palm)
+    +media($desk)
       display: inline-block
 
     +media($desk)

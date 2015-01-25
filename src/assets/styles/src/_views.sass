@@ -10,9 +10,18 @@
     +media($desk)
       width: 50%
 
+  .pane-inner, .pane-inner--main
+    +rem(padding-top, $bigger)
+    +media($desk)
+      padding-top: 0
+
 .about
   .pane--one
     background-color: $salmon
+
+  .pane-inner--main
+    padding-top: 0
+
 
 .talks
   .pane--one
