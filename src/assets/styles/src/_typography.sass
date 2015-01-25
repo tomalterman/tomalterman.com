@@ -32,7 +32,7 @@ a
     opacity: 0.5
 
 .ul
-  +rem(margin-left, $normal)
+  +rem(margin-left, $bigger)
   +rem(margin-bottom, $normal)
 
 //To refactor
@@ -123,11 +123,15 @@ a
 .button--next
   @extend .button--sidebar
   float: right
-  +rem(margin-top, $bigger)
+  +rem(margin-top, $normal)
 
   span
     font-size: 0.8em
     margin-right: 0.5em
+
+.button--previous
+  @extend .button--next
+  float: left
 
 .button--home
   @extend .button

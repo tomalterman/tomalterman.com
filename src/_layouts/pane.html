@@ -2,7 +2,9 @@
 layout: default
 ---
 
-{% include nav.html %}
+{% if page.pageClass != 'home'%}
+  {% include nav.html %}
+{% endif %}
 
 <div class="pane pane--one" id="paneOne">
   <div class="pane-inner {{ page.innerClass }}">
