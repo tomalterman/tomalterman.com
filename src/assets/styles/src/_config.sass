@@ -89,10 +89,13 @@ $font-headers: 'Gotham Pro Bold', sans-serif
 $palm-width: 320px
 $lap-width: 768px
 $desk-width: 1024px
+$tiny-width: 498px
 $palm: '(max-width:' #{$lap-width - 1px} + ')'
 $lap:  '(min-width:' + $lap-width + ') and (max-width:' #{$desk-width -1px} + ')'
 $desk: '(min-width:' + $desk-width + ')'
 $not-palm: '(min-width:' + $lap-width + ')'
+$not-tiny: '(min-width:' + $tiny-width + ')'
+
 
 =media($media)
   @media #{$media}

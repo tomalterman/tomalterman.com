@@ -1,0 +1,25 @@
+.contacts
+  +rem(font-size, $lbig)
+  max-width: 10em
+  margin: 0 auto
+
+  a
+    color: $black
+
+.contacts--list
+  @extend .sideContent
+  width: 100%
+  list-style: none
+
+  +media($desk)
+    +rem(font-size, $vbig)
+    width: auto
+
+  > li
+    +rem(margin-bottom, $normal)
+
+  a
+    text-decoration: none
+
+  .fa
+    +rem(margin-right, $small)

@@ -7,17 +7,25 @@
     text-decoration: none
     +rem(padding, $tiny)
     +rem(margin, $small $normal)
+    margin-right: 0
 
   .button
     display: inline-block
     border-width: 0
 
-    &.isActive
-      border-bottom-width: 1px
+  .isActive
+    display:none
+
+    +media($not-tiny)
+      display: inline-block
+      .button
+        border-bottom-width: 1px
+
 
   > ul
     float: right
     +rem(padding, $small $normal)
+    padding-left: 0
 
     +media($desk)
       width: calc(100% - 24em)

@@ -1,0 +1,52 @@
+.header--name
+  text-transform: uppercase
+  font-weight: 700
+  border-bottom: 1px solid black
+  display: inline-block
+  font-family: $font-headers
+
+.header--home
+  +rem(margin-bottom, $bigger)
+
+  h1
+    font-size: 44px
+
+  p
+    font-family: $font-headers
+    letter-spacing: 2px
+    font-style: italic
+    font-size: 17px
+
+.headerImg
+  position: relative
+  width: 100%
+  height: 10em
+
+  +media($lap)
+    height: 8em
+
+  +media($desk)
+    height: 14em
+
+.headerImg-h
+  position: absolute
+  bottom: $normal
+  +rem(left, $huge)
+  z-index: 2
+
+.headerImg-img
+  z-index: 1
+  height: 100%
+  width: 100%
+
+.header-skills
+  +rem(padding-bottom, $normal)
+  color: $grey-medium
+  border-bottom: 1px solid $black
+
+  > li
+    &:before
+      content: '/'
+    &:first-child
+      &:before
+        content: none
