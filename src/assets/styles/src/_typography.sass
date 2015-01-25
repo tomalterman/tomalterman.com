@@ -1,6 +1,13 @@
 body
-  font:120%/1.5 'Trykker', serif
+  font-size: 100%
+  color: $black
+  background-color: $white
+  line-height: 1.5
+  font-family: 'Trykker', serif
   -webkit-font-smoothing: antialiased
+
+  +media($not-palm)
+    font-size: 120%
 
 h1, h2
   font-family: $font-headers
@@ -54,6 +61,10 @@ a
     font-style: italic
     font-size: 17px
 
+.header-skills
+  +rem(padding-bottom, $normal)
+  border-bottom: 1px solid $black
+
 .u-margin--none
   margin-bottom: 0
 
@@ -92,10 +103,13 @@ a
 .button
   font-family: $font-headers
   border: 2px solid black
-  +rem(padding, $tiny $normal)
+  +rem(padding, $tiny)
   display: block
   text-decoration: none
   color: $black
+
+  +media($not-palm)
+    +rem(padding, $tiny $normal)
 
   &:hover, &:focus, &:active
     background-color: $black
@@ -175,3 +189,21 @@ a
 
   a
     color: $black
+
+.contacts--list
+  @extend .sideContent
+  width: 100%
+  list-style: none
+
+  +media($desk)
+    +rem(font-size, $vbig)
+    width: auto
+
+  > li
+    +rem(margin-bottom, $normal)
+
+  a
+    text-decoration: none
+
+  .fa
+    +rem(margin-right, $small)

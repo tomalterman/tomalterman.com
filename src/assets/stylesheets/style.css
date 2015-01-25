@@ -195,8 +195,15 @@ img {
   padding-right: 3.2rem; }
 
 body {
-  font: 120%/1.5 'Trykker', serif;
+  font-size: 100%;
+  color: #000000;
+  background-color: #FFFFFF;
+  line-height: 1.5;
+  font-family: 'Trykker', serif;
   -webkit-font-smoothing: antialiased; }
+  @media (min-width:768px) {
+    body {
+      font-size: 120%; } }
 
 h1, h2 {
   font-family: 'Voltaire', sans-serif; }
@@ -255,6 +262,11 @@ a {
   font-style: italic;
   font-size: 17px; }
 
+.header-skills {
+  padding-bottom: 20px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #000000; }
+
 .u-margin--none {
   margin-bottom: 0; }
 
@@ -291,11 +303,15 @@ a {
 .button, .button--sidebar, .button--next, .button--previous, .button--home {
   font-family: 'Voltaire', sans-serif;
   border: 2px solid black;
-  padding: 8px 20px;
-  padding: 0.4rem 1rem;
+  padding: 8px;
+  padding: 0.4rem;
   display: block;
   text-decoration: none;
   color: #000000; }
+  @media (min-width:768px) {
+    .button, .button--sidebar, .button--next, .button--previous, .button--home {
+      padding: 8px 20px;
+      padding: 0.4rem 1rem; } }
   .button:hover, .button--sidebar:hover, .button--next:hover, .button--previous:hover, .button--home:hover, .button:focus, .button--sidebar:focus, .button--next:focus, .button--previous:focus, .button--home:focus, .button:active, .button--sidebar:active, .button--next:active, .button--previous:active, .button--home:active {
     background-color: #000000;
     color: #FFFFFF; }
@@ -359,7 +375,7 @@ a {
   .button--greeny:hover, .button--greeny:focus, .button--greeny:active {
     background-color: #9BF1D3; }
 
-.sideContent {
+.sideContent, .contacts--list {
   max-width: 38em;
   padding: 0 64px;
   padding: 0 3.2rem; }
@@ -371,6 +387,23 @@ a {
   margin: 0 auto; }
   .contacts a {
     color: #000000; }
+
+.contacts--list {
+  width: 100%;
+  list-style: none; }
+  @media (min-width:1024px) {
+    .contacts--list {
+      font-size: 32px;
+      font-size: 1.6rem;
+      width: auto; } }
+  .contacts--list > li {
+    margin-bottom: 20px;
+    margin-bottom: 1rem; }
+  .contacts--list a {
+    text-decoration: none; }
+  .contacts--list .fa {
+    margin-right: 16px;
+    margin-right: 0.8rem; }
 
 .img--round {
   border-radius: 50%; }
