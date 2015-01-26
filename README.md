@@ -1,3 +1,3 @@
-# tomalterman
+# tomalterman.com
 
-[Describe the project.]
+My personal website powered by Jekyll, Sass and Gulp.
