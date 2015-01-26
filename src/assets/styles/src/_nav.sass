@@ -1,5 +1,9 @@
 .nav
   width: 100%
+  +rem(font-size, 13px)
+
+  +media($not-tiny)
+    +rem(font-size, $normal)
 
   .logo
     float: left
